@@ -13,23 +13,24 @@ function TrabajadoresView() {
             throw error
         }
     }
-
     useEffect(()=>{
         getTrabajadores()
     },[])
     return (
-        <div className="container-fluid">
-            <div className="row">
 
+        <div className="container">
+        <header><h1>EL EQUIPO</h1></header>
+            <div className="row mb-5">
             {trabajadores.map((trab,i)=>(
-                 <div className="col-4">
-                        <div className="card">
-                            <div className="card-header">{trab.Nombre}</div>
-                            <div className="card-body">{trab.Foto}</div>
+                 <div className="col-lg-6 col-12 mt-5 p-2 " key={i} >
+                        <div className="d-flex" 
+                        style={{Width:'450px',textAlign:'center',}}>
+                            <img className="img-card-left" style={{height:'400px', width:'350px'}} src={trab.Foto}/>
+                            <div className="d-block w-75" style={{textAlign:'center',height:'400px',width:'350px'}}><h2>{trab.Nombre}</h2>
+                            <h3 className="d-block w-75" style={{textAlign:'center',height:'400px'}}>{trab.Descripcion_trabajador}</h3></div>
                         </div>
                 </div>
             ))}
-           
            </div>
         </div>
     )

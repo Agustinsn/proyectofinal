@@ -1,22 +1,24 @@
 import React,{useState,useEffect} from 'react'
-import {crearCita} from '../Services/clienteService'
+import Example from '../Componentes/DatePicker'
+import Form from "../Componentes/Form"
 
 function CrearCitaView() {
     return (
-
-          <div className="col-5 m-5"> 
-          <form>
-            <div className="mb-3">
-              <label>Nombre</label>
-              <input type="text" 
-              className="form-control"/>
+      <div className="container">
+        <div className="row"> 
+            <div className="col col-6">
+              <Form/>
             </div>
-            <div>
-              <label className="form-label">Email</label>
-              <input type="email" className="form-control"/>
+            <div className="col col-6 mt-5 pt-1">
+              <Example/>
             </div>
-          </form>
+            <div className="col col-6">
+             <p> HOLA</p> Hola
+            </div>
           </div>
+
+      </div>
+          
 
     )
 }

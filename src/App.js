@@ -1,16 +1,22 @@
+import React from "react"
+import {Switch, BrowserRouter as Router} from "react-router-dom"
+import NavTop from "./Componentes/NavTop";
+import Routes from "./Routes";
+import Footer from "./Componentes/Footer";
 import './App.css';
-import TrabajadoresView from './Views/TrabajadoresView'
-import CrearCitaView from './Views/CrearCitaView'
-import GaleriaView from './Views/GaleriaView'
+import CrearCitaView  from "./Views/CrearCitaView";
+import Example from "./Componentes/DatePicker";
+
+
 
 function App() {
   return (
-    <div className="App">
-
-
-
-      <GaleriaView/>
-    </div>
+    <Router>
+      <NavTop/>
+      <Switch>
+        <Routes/>
+      </Switch>
+    </Router>
   );
 }
 

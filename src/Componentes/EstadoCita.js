@@ -1,10 +1,11 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect, Fragment } from 'react'
 import { obtenerCliente } from '../Services/clienteService'
 
 function EstadoCita() {
     const [clientes,setClientes]=useState([])
     const [idCliente,setIdCliente]=useState('')
     const [datos,setDatos]=useState([])
+    const [boton,setBoton]=useState(false)
 
     const obtenerDatos=async()=>{
         let datosObtenidos = await obtenerCliente()
@@ -26,6 +27,7 @@ function EstadoCita() {
     const handlesubmit=(e)=>{
         e.preventDefault()
         obtenerDatosCliente(idCliente)
+        setBoton(!boton)
         
     }
     useEffect(()=>{
@@ -36,7 +38,7 @@ function EstadoCita() {
         <div className="container">
             <div className="row"  style={{justifyContent:'center'}}>
                 <form onSubmit={handlesubmit}>
-                    <div className="form-group">
+                    <div className="form-group"> 
                        <h4 style={{color:'black'}}>Ingrese el codigo que le brindaron al momento de confirmar su cita</h4>
                        <input
                        type="number"
@@ -49,16 +51,18 @@ function EstadoCita() {
                        />
                     </div>
                     <button className="btn btn-success" type="submit">Ver Cita</button>
-                </form>
-                    
+                </form>         
             </div>
+            {boton===true?
+            <div>
             <span>Bienvenid@ {datos.nombre}</span>
             <p>El estado de su cita es: {datos.estado}</p>
             <p>El dia de su cita es: {datos.fecha}</p>
             <p>La hora de su cita es: {datos.hora}</p>
             <p>El servicio a realizar es: </p>
             <p>El estilista a realizar el servicio es: </p>
-            <p></p>
+            </div>:
+            <Fragment></Fragment>}
         </div>
     )
 }

@@ -31,7 +31,7 @@ function EstadoCita() {
             <div className="row">
                 <form onSubmit={handlesubmit}>
                     <div className="form-group">
-                       <label>Ingrese el codigo que le brindaron al momento de confirmar su cita</label>
+                       <label style={{color:'black'}}>Ingrese el codigo que le brindaron al momento de confirmar su cita</label>
                        <input
                        type="number"
                        name="codigo"

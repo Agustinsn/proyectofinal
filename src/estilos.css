@@ -35,6 +35,7 @@
 #muestra{
     border: black solid 1px;
     width: fit-content;
+    text-align: start;
 }
 /*responsive form*/
 @media (max-width:600px) {

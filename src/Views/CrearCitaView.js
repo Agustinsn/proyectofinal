@@ -9,17 +9,20 @@ function CrearCitaView() {
     const [boton2,setBoton2]=useState(false)
     return (
       <div className="container" style={{height:'100%'}}>
-        <div style={{paddingTop:'50px',textAlign:'center'}}>
-          <button
-          onClick={(e)=>setBoton1(!boton1)}
-          >Agende su cita AQUI</button>
-          <h1>Agende su cita</h1>
+        <div className="row">
+        <div className="col-12 col-lg-10" style={{paddingTop:'50px',textAlign:'center'}}>
           {boton1===true? 
           <Form/>
           : <div><EstadoCita/></div>}
         </div>
+        <div className="col-12 col-lg-2" style={{marginTop:'50px'}}>
+        <button
+          onClick={(e)=>setBoton1(!boton1)}
+          style={{backgroundColor:'lightblue'}}
+          >Conozca el estado de su cita AQUI</button>
+        </div>
         
-        
+        </div>
       </div>
           
 

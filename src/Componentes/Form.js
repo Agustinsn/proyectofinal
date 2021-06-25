@@ -104,8 +104,9 @@ const ContactForm = () => {
 
   return (
     <div className="container">
+      <h1>Agende su cita</h1>
       <div className="row">
-        <div className="col col-lg-6">
+        <div className="col col-lg-7">
       <form onSubmit={handleSubmit} id="formulario" >
         <div className="form-group ">
           <label>Nombre y Apellido</label>
@@ -187,7 +188,7 @@ const ContactForm = () => {
 
       </form>
       </div>
-      <div className="col col-6 d-none d-lg-block" id="muestra">
+      <div className="col col-lg-4 d-none d-lg-block" id="muestra">
         <h2 style={{fontWeight:'bold'}}>Datos</h2>
         <p>Nombre: {nombre}</p>
         <p>Correo: {correo}</p>

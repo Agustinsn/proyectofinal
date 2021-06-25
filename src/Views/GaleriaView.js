@@ -20,21 +20,20 @@ function GaleriaView() {
     },[])
 
     return (
-        <div>
-
-        <div className="container">
+        <div className="container" >
             <div className="row">
             {galeria.map((gal,i)=>(
-                <div className="col-auto col-sm-4" key={i}>
-                <div className="card mt-3" >
+                <div className="co-12 col-lg-4" key={i} id="servicios-general">
+                <div className="card mt-3" id="servicios">
                     <img className="card-img-top" 
-                    src={gal.Foto_galeria}
+                    src={gal.foto}
                     />
+                    <p>{gal.nombre}</p>
+                    <p style={{fontWeight:'bold'}}>Precio: S/. {gal.precio}</p>
                 </div>
                 </div>
             ))}
             </div>
-        </div>
         </div>
     )
 }

@@ -4,8 +4,7 @@ import NavTop from "./Componentes/NavTop";
 import Routes from "./Routes";
 import Footer from "./Componentes/Footer";
 import './App.css';
-import CrearCitaView  from "./Views/CrearCitaView";
-import Example from "./Componentes/DatePicker";
+import './estilos.css'
 
 
 
@@ -16,6 +15,7 @@ function App() {
       <Switch>
         <Routes/>
       </Switch>
+      <Footer/>
     </Router>
   );
 }

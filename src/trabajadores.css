@@ -1,0 +1,35 @@
+#TrabGen{
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+
+}
+#TrabGen header{
+  display: block;
+  text-align: center;
+}
+#row-card div{
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+
+}
+.card {
+    flex-direction: row;
+    margin-bottom: 50px;
+    color: black;
+    background: radial-gradient(circle, rgba(154,156,158,1) 32%, rgba(245,247,250,1) 100%);    
+    width: 75%;
+    box-shadow: 10px 5px 5px black;
+    box-sizing: border-box;
+  }
+  .card-title {
+    font-weight: bold;
+  }
+  .card img {
+    width: 90%;
+    object-fit: cover;
+    margin-bottom: 15px;
+
+  }
+

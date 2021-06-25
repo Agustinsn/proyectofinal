@@ -1,9 +1,160 @@
-.form-group{
-    color:blue
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Merienda&display=swap');
+
+
+/*Form*/
+#formulario{
+    background-color: rgb(0, 0, 0);
+    margin: 0 100px 0;
+    text-align: start;
 }
 .form-group input{
-    color:aqua
+
+    display: block;
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 10px 15px;
+    margin:0 5px 10px 5px ;
+    font-size: 14px;
+    
 }
-.text-center p{
-    color: red;
+.form-group label{
+    margin-left: 5px;
+    color: white;
+}
+.form-group select{
+    margin-bottom: 10px;
+}
+.btn{
+    margin:10px 0 10px;
+}
+#datepicker{
+    margin-left: 10px;
+}
+#muestra{
+    border: black solid 1px;
+    width: fit-content;
+}
+/*responsive form*/
+@media (max-width:600px) {
+    #formulario{
+        margin:0
+    }
+    .form-group input{
+        margin:0px 5px 10px 10px ;
+    }
+}
+/*Nav*/
+.dropdown-menu>li>a:hover{
+    background-color:transparent;
+}
+#navgeneral{
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #2d3436
+
+}
+#navgeneral nav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: transparent;
+    
+}
+
+#navgeneral nav div{
+    width: max-content;
+    padding-left: 20px;
+    background-color: transparent;
+    
+}
+
+#navbarNav{
+    width: max-content;
+    padding-right: 20px;
+    background-color: transparent;
+}
+
+.navbar-nav li{
+    padding: 0 20px 0;
+    
+}
+/*Home*/
+#main{
+    padding-bottom:50px;
+}
+#cuerpo{
+    padding-top: 30px;
+}
+#titulo-main{
+    font-family: 'Charmonman';
+    font-size: 80px;
+    font-weight: bold;
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+    
+}
+#cuerpo div h2{
+    font-family: 'Charmonman';
+}
+#cuerpo p{
+    padding-top: 20px;
+    font-family: 'Merienda';
+    font-size: 20px;
+    width: fit-content;
+}
+#img-ubi{
+    box-shadow: 5px 5px 5px gray ;
+    width: 500px;
+}
+#texto1{
+    margin: auto;
+    width: 60%;
+}
+/* Responsive Home*/
+@media (max-width:600px) {
+    #texto1{
+        width: 100%;
+    }
+    #titulo-main{
+        font-size: 40px;
+        
+    }
+    #img-ubi{
+        box-shadow: 5px 5px 5px gray;
+        width: 300px
+    }
+    #Numcontacto{
+        font-size: 20px;
+
+    }
+
+}
+/*Cita*/
+#citaGen{
+    padding-top: 50px;
+}
+
+/*Servicios*/
+
+#servicios{
+    text-align: center;
+    height: 400px;
+    align-items: center;
+}
+#servicios img{
+    height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+@media (max-width:600px) {
+    #servicios-general{
+        display: flex;
+        justify-content: center;
+    }
 }

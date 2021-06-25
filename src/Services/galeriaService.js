@@ -1,5 +1,5 @@
 import axios from "axios"
-const url= "https://60b48b134ecdc10017480c38.mockapi.io/galeria"
+const url= "https://60c1f0b34f7e880017dc0deb.mockapi.io/servicio"
 
 const obtenerGaleria= async()=>{
     try {

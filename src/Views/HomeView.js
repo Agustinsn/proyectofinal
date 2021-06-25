@@ -1,36 +1,59 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import CarouselContainer from '../Componentes/Slide'
 import ubicacion from '../img/Ubicacion.PNG'
-import background from '../img/background.jpg'
+import wts from '../img/wts.svg'
 
 
 function HomeView() {
     return (
-<main className="container-fluid w-100" 
-style={{backgroundImage:`linear-gradient(white, lightblue)`}}>	
-	<div className="container">
-			<CarouselContainer/>	
+<div className="container-fluid" id="main">	
+	<div className="container-fluid" id="cuerpo">	
 			<div className="container pt-5 mx-auto" style={{textAlign:'center'}}>
-				<h1 style={{textAlign:'center'}}>BIENVENIDOS AL SPA</h1>
-				<p className="mx-5" >Ubicados en Lima, el SPA XX es el lugar ideal para ese corte de cabello o tratamiento facial que tanto desea. Contamos con un equipo especializado en diversos tratamientos para brindarle el mejor servicio. LOS ESPERAMOS! </p>
-				<div className="row">
-					<div className="col col-8 mt-5">	
-						<h2>Nuestra Ubicacion</h2>
-						<p>Nos encontramos en Av. Jose Larco, en el distrito de Miraflores. Contamos con estacionamiento vigilado para mayor seguridad.</p> <br/>
-						<img src={ubicacion} style={{maxWidth:'500px'}}/>
-					</div>
-
-					<div className="col col-4 mt-5">
-						<h2>Horario de Atencion</h2>
-						<p>Debido a la pandemia actual, nuestro horario de atencion se encuentra reducido, asi mismo es necesario agendar la cita previamente debido al limite de aforo permitido</p>
-					</div>
+				<h1 style={{textAlign:'center'}} id="titulo-main">BIENVENIDOS AL SPA</h1>
+				<CarouselContainer important/>
+				<div id="texto1">
+				<p>Ubicados en Lima, el SPA XX es el lugar ideal para ese corte de cabello o tratamiento facial que tanto desea. Contamos con un equipo especializado en diversos tratamientos para brindarle el mejor servicio. LOS ESPERAMOS! </p>
 				</div>
 
+				<div className="row">
+					<div className="col col-lg-8 mt-5">	
+						<h2>Nuestra Ubicacion</h2>
+						<p>Nos encontramos en Av. Jose Larco, en el distrito de Miraflores. Contamos con estacionamiento vigilado para mayor seguridad.</p> <br/>
+						<img src={ubicacion} id="img-ubi"/>
+					</div>
+
+					<div className="col col-lg-4 mt-5">
+						<h2>Horario de Atencion</h2>
+						<p>Debido a la pandemia actual, nuestro horario de atencion se encuentra reducido, asi mismo es necesario agendar la cita previamente debido al limite de aforo permitido</p>
+						<div style={{paddingTop:'50px',fontSize:'20px',fontWeight:'bold'}}>
+							Lunes a Sabado de 9am a 9pm
+							<br/>
+							Domingos no atendemos
+						</div>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col col-lg mt-5">
+					<h2>Contactanos!</h2>
+					<p>Si tiene alguna duda sobre los servicios que brindamos
+						o desea solicitar algun servicio en especial no dude en 
+						contactarnos dando click en la imagen de WhatsApp o mandando un mensaje al siguiente número.
+					</p>
+					</div>
+				</div>
+				<div className="row">
+				<div className="col-6 col-lg-6">	
+				<a href="https://wa.link/hk7s4q" style={{display:'flex',justifyContent:'flex-end'}}><img src={wts} style={{width:'30%'}} href="https://wa.link/pg48kc"/></a>		
+				</div>
+				<div className="col-6 col-lg-6" id="contacto">
+				<h1 id="Numcontacto" style={{marginRight:'200px'}}>+51 987654321</h1>
+				</div>
+				</div>
 			</div>
 	</div>
 			
-</main>
+</div>
     )
 }
 

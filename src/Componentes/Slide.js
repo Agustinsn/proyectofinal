@@ -10,7 +10,7 @@ const CarouselContainer = () => {
   return (
     <Carousel fade={true} pause={false} 
     className="d-block mx-auto pt-5"
-    style={{maxWidth:'700px', maxHeight:'700px'}}>
+    style={{maxWidth:'700px', maxHeight:'700px',boxShadow:'5px 5px 5px grey'}}>
       <Carousel.Item interval={3000}>
         <img
           className="d-block"

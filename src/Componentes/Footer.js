@@ -2,11 +2,10 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer className="main-footer" 
-        style={{color:'black',
-        backgroundColor:'transparent',
-        marginTop:'15px',
-        position:'relative',
+        <footer 
+        style={{color:'white',
+        backgroundColor:'#2d3436',
+        position:'static',
         bottom:'0',
         width:'100%'}}>
       <div className="container">

@@ -1,22 +1,25 @@
-import React,{useState,useEffect} from 'react'
-import Example from '../Componentes/DatePicker'
+import React, { useState } from 'react'
 import Form from "../Componentes/Form"
+import EstadoCita from '../Componentes/EstadoCita'
+
 
 function CrearCitaView() {
-    return (
-      <div className="container">
-        <div className="row"> 
-            <div className="col col-6">
-              <Form/>
-            </div>
-            <div className="col col-6 mt-5 pt-1">
-              <Example/>
-            </div>
-            <div className="col col-6">
-             <p> HOLA</p> Hola
-            </div>
-          </div>
 
+    const [boton1,setBoton1]=useState(true)
+    const [boton2,setBoton2]=useState(false)
+    return (
+      <div className="container" style={{height:'100%'}}>
+        <div style={{paddingTop:'50px',textAlign:'center'}}>
+          <button
+          onClick={(e)=>setBoton1(!boton1)}
+          >Agende su cita AQUI</button>
+          <h1>Agende su cita</h1>
+          {boton1===true? 
+          <Form/>
+          : <div><EstadoCita/></div>}
+        </div>
+        
+        
       </div>
           
 

@@ -1,5 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import {obtenerTrabajadores} from "../Services/trabajadoresService"
+import "../trabajadores.css"
+
+
 
 function TrabajadoresView() {
 
@@ -18,18 +21,20 @@ function TrabajadoresView() {
     },[])
     return (
 
-        <div className="container">
+        <div className="container-fluid" id="TrabGen">
         <header><h1>EL EQUIPO</h1></header>
-            <div className="row mb-5">
+            <div className="row" id="row-card">
             {trabajadores.map((trab,i)=>(
-                 <div className="col-lg-6 col-12 mt-5 p-2 " key={i} >
-                        <div className="d-flex" 
-                        style={{Width:'450px',textAlign:'center',}}>
-                            <img className="img-card-left" style={{height:'400px', width:'350px'}} src={trab.Foto}/>
-                            <div className="d-block w-75" style={{textAlign:'center',height:'400px',width:'350px'}}><h2>{trab.Nombre}</h2>
-                            <h3 className="d-block w-75" style={{textAlign:'center',height:'400px'}}>{trab.Descripcion_trabajador}</h3></div>
-                        </div>
-                </div>
+                 <div className="col-12 col-lg-6" key={i} >
+                 <div
+                   className="card flex-row border-light" >
+                   <img className="card-img-left" src={trab.foto}/>
+                   <div className="card-body" style={{display:'flex', flexDirection:'column'}}>
+                     <h6 className="card-title" style={{alignSelf:'center'}}>{trab.nombre}</h6>
+                     <span className="card-text" style={{alignSelf:'center',textAlign:'center'}}> {trab.descripcion}</span>
+                   </div>
+                 </div>
+               </div>
             ))}
            </div>
         </div>

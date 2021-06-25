@@ -62,13 +62,13 @@ function NavTop() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
+              <a
                 className="nav-link"
                 href="#"
                 style={{textDecoration:'none', color:'white'}}
                 >
                 GALERIA
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
               <Link

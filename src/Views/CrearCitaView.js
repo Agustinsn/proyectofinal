@@ -6,7 +6,6 @@ import EstadoCita from '../Componentes/EstadoCita'
 function CrearCitaView() {
 
     const [boton1,setBoton1]=useState(true)
-    const [boton2,setBoton2]=useState(false)
     return (
       <div className="container" style={{height:'100%'}}>
         <div className="row">
@@ -18,10 +17,9 @@ function CrearCitaView() {
         <div className="col-12 col-lg-2" style={{marginTop:'50px'}}>
         <button
           onClick={(e)=>setBoton1(!boton1)}
-          style={{backgroundColor:'lightblue'}}
-          >Conozca el estado de su cita AQUI</button>
+          style={{backgroundColor:'salmon'}}
+          >Conozca el estado de su cita <strong>AQUI</strong></button>
         </div>
-        
         </div>
       </div>
           

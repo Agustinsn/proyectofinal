@@ -139,12 +139,14 @@ const ContactForm = () => {
           <textarea 
           className="form-control" 
           onChange={(e) => {setDescripcion(e.target.value)}}
-          placeholder="Ingrese un comentario para el staff"
+          placeholder="Ingrese un comentario para el staff o puede dejar su número telefonico."
           value={descripcion}
           style={{width:'90%',marginLeft:'5px'}}></textarea>
         </div>
         {/*Select del servicio */}
-        <select onChange={(e)=>{setServicioId(e.target.value)}} required>
+        <select onChange={(e)=>{setServicioId(e.target.value)}} 
+        style={{margin:'0px 5px 10px'}}
+        required>
           <option hidden value="">Elige el servicio</option>
           {servicio.map((serv,i)=>(
                 
@@ -153,7 +155,9 @@ const ContactForm = () => {
     
           ))}</select>
           {/*Select del estilista */}
-          <select onChange={(e)=>{setEstlistaId(e.target.value)}}  required>
+          <select onChange={(e)=>{setEstlistaId(e.target.value)}}  
+          style={{margin:'0px 5px 10px'}}
+          required>
           <option hidden value="">Elige tu estilista</option>
 
             {trabajadores.map((trab,i)=>(

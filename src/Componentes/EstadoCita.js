@@ -13,8 +13,14 @@ function EstadoCita() {
     
     const obtenerDatosCliente =(idCliente)=>{
         let encontrado = clientes.find((clientes)=>clientes.id===idCliente)
-        setDatos(encontrado)
-        return encontrado
+        if (encontrado !==undefined){
+            setDatos(encontrado)
+            console.log(encontrado)
+            return encontrado
+        }else{
+            alert("Verifique su codigo y vuelva a ingresarlo")
+        }
+
     }
 
     const handlesubmit=(e)=>{
@@ -28,27 +34,31 @@ function EstadoCita() {
     
     return (
         <div className="container">
-            <div className="row">
+            <div className="row"  style={{justifyContent:'center'}}>
                 <form onSubmit={handlesubmit}>
                     <div className="form-group">
-                       <label style={{color:'black'}}>Ingrese el codigo que le brindaron al momento de confirmar su cita</label>
+                       <h4 style={{color:'black'}}>Ingrese el codigo que le brindaron al momento de confirmar su cita</h4>
                        <input
                        type="number"
                        name="codigo"
                        onChange={(e)=>setIdCliente(e.target.value)}
-                        value={idCliente}
+                       value={idCliente}
                        className="form-control"
                        placeholder="Ejem:123"
+                       style={{}}
                        />
                     </div>
                     <button className="btn btn-success" type="submit">Ver Cita</button>
                 </form>
-                {clientes.map((cli,i)=>(
-                    <div className="col-12" key={i}>{cli.nombre} {cli.id}</div>
-                    ))}
                     
             </div>
-            <p>{datos.hora}</p>
+            <span>Bienvenid@ {datos.nombre}</span>
+            <p>El estado de su cita es: {datos.estado}</p>
+            <p>El dia de su cita es: {datos.fecha}</p>
+            <p>La hora de su cita es: {datos.hora}</p>
+            <p>El servicio a realizar es: </p>
+            <p>El estilista a realizar el servicio es: </p>
+            <p></p>
         </div>
     )
 }

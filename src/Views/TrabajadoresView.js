@@ -21,8 +21,8 @@ function TrabajadoresView() {
     },[])
     return (
 
-        <div className="container-fluid" id="TrabGen">
-        <header><h1>EL EQUIPO</h1></header>
+        <div className="container" id="TrabGen">
+        <header><p>EL EQUIPO</p></header>
             <div className="row" id="row-card">
             {trabajadores.map((trab,i)=>(
                  <div className="col-12 col-lg-6" key={i} >

@@ -44,9 +44,14 @@ function NavTop() {
               style={{backgroundColor:'#2d3436'}}>
                 <li >
                   <Link className="dropdown-item py-2" 
-                  to="/Trabajadores" style={{color:'white'}}
-                  onClick={manejarNavbar}>Nuestro Equipo</Link></li>
-                <li ><a className="dropdown-item" href="/#contacto" style={{color:'white'}} onClick={manejarNavbar}
+                  to="/Trabajadores" 
+                  style={{color:'white'}}
+                  onClick={manejarNavbar}>Nuestro Equipo
+                  </Link>
+                </li>
+                <li ><a className="dropdown-item" href="/#contacto" 
+                style={{color:'white'}} 
+                onClick={manejarNavbar}
                 >Contactanos</a></li>
               </ul>
 
@@ -60,16 +65,6 @@ function NavTop() {
                 onClick={manejarNavbar}>
                 SERVICIOS
               </Link>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#"
-                style={{textDecoration:'none', color:'white'}}
-                onClick={manejarNavbar}
-                >
-                GALERIA
-              </a>
             </li>
             <li className="nav-item">
               <Link

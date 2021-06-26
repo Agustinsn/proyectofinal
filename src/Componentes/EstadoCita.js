@@ -6,6 +6,7 @@ function EstadoCita() {
     const [clientes,setClientes]=useState([])
     const [idCliente,setIdCliente]=useState('')
     const [datos,setDatos]=useState([])
+
     const [boton,setBoton]=useState(false)
     const [cargando, setCargando]= useState(true)
 
@@ -14,7 +15,15 @@ function EstadoCita() {
         setClientes([...datosObtenidos])
         setCargando(false)
     }
-    
+    const fechaReal = (dato)=>{
+        let fecha = new Date(parseInt(dato))    
+        return fecha.toLocaleDateString()
+    }
+    const horaReal = (dato)=>{
+        let hora = new Date(dato)    
+        return hora.getTime()
+    }
+
     const obtenerDatosCliente =(idCliente)=>{
         let encontrado = clientes.find((clientes)=>clientes.id===idCliente)
         if (encontrado !==undefined){
@@ -27,7 +36,6 @@ function EstadoCita() {
             setBoton(false)
             setDatos('')
         }
-
     }
 
     const handlesubmit=(e)=>{
@@ -66,13 +74,12 @@ function EstadoCita() {
                 </form>         
             </div>
             {boton===true && datos !== '' ?
-            <div className="col-12">
-            <span>Bienvenid@: {datos.nombre}</span>
+            <div className="col-12" style={{marginTop:'30px'}}>
+            <h6>Bienvenid@: {datos.nombre}</h6>
             <p>El estado de su cita es: {datos.estado}</p>
-            <p>El dia de su cita es: {datos.fecha}</p>
-            <p>La hora de su cita es: {datos.hora}</p>
-            <p>El servicio a realizar es: </p>
-            <p>El estilista a realizar el servicio es: </p>
+            <p>El dia de su cita es: {fechaReal(datos.fecha)}</p>
+            <p>La hora de su cita es: {horaReal(datos.hora)}</p>
+
             </div>:
             <Fragment></Fragment>}
         </div>

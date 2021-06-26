@@ -48,6 +48,7 @@ const ContactForm = () => {
     id_servicio,
     hora,
   }
+
   
   {/* Obtener datos*/}
   const getTrabajadores= async()=>{
@@ -93,8 +94,14 @@ const ContactForm = () => {
       confirmButtonText: 'Enviar'
     }).then((result)=>{
       if (result.isConfirmed){
-        Swal.fire('Gracias! El staff se estará contactando con usted lo antes posible para confirmar su cita.','','success')
+        Swal.fire({title:'Gracias!',
+        text:'Gracias! El staff se estará contactando con usted lo antes posible para confirmar su cita.',
+        icon:'success'
+      }).then(function(){ 
+        window.location.reload();
+      })
         crearCita(datos)
+
       } else if (result.isDenied){
         
       }

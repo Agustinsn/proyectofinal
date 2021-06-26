@@ -37,6 +37,10 @@ function EstadoCita() {
             setDatos('')
         }
     }
+    const limpiar=(e)=>{
+        setIdCliente('')
+        setBoton(!boton)
+    }
 
     const handlesubmit=(e)=>{
         e.preventDefault()
@@ -71,6 +75,7 @@ function EstadoCita() {
                        />
                     </div>
                     <button className="btn btn-success" type="submit">Ver Cita</button>
+                    
                 </form>         
             </div>
             {boton===true && datos !== '' ?
@@ -79,7 +84,7 @@ function EstadoCita() {
             <p>El estado de su cita es: {datos.estado}</p>
             <p>El dia de su cita es: {fechaReal(datos.fecha)}</p>
             <p>La hora de su cita es: {horaReal(datos.hora)}</p>
-
+            <button onClick={(e)=>limpiar(e)}>Limpiar</button>
             </div>:
             <Fragment></Fragment>}
         </div>

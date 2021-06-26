@@ -182,3 +182,46 @@
     font-family: 'Charmonman';
 
 }
+/*Footer*/
+
+#fb{
+    width: 10%;
+    margin-right:10px;
+}
+#inst{
+    width: 10%;
+}
+#creditos p{
+    margin-left: 15px;
+}
+#centro{
+    text-align: center;
+} 
+#spa{
+    font-size: 30px;
+}
+#derechos{
+    font-size: 10px;
+}
+
+@media (max-width:600px) {
+    #fb{
+        width: 25%;
+        margin-right:10px;
+    }
+    #inst{
+        width: 25%;
+    }
+    #creditos, p{
+        font-size: 11px;
+    }
+    #centro{
+        text-align: center;
+    } 
+    #spa{
+        font-size: 11px;
+    }
+    #derechos{
+        font-size: 9px;
+    }
+}

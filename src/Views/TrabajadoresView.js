@@ -29,7 +29,10 @@ function TrabajadoresView() {
                 <Loading/>
             ):(
         <div className="container" id="TrabGen">
-        <header><p>EL EQUIPO</p></header>
+        <header>EL EQUIPO</header>
+        <div style={{textAlign:'center'}}><p>Nuestro equipo esta conformado por los mejores profesionales del mercado, altamente capacitados para cualquier servicio que desee.
+                </p></div>
+
             <div className="row" id="row-card">
             {trabajadores.map((trab,i)=>(
                  <div className="col-12 col-lg-6" key={i} >

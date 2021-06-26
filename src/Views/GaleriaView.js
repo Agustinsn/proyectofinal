@@ -17,9 +17,7 @@ function GaleriaView() {
         } catch (error) {
             throw error
         }
-    }
-
-    
+    }  
     useEffect(()=>{
         getGaleria(); 
         

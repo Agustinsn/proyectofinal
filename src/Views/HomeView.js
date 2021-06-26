@@ -20,7 +20,10 @@ function HomeView() {
 					<div className="col col-lg-8 mt-5">	
 						<h2>Nuestra Ubicacion</h2>
 						<p>Nos encontramos en Av. Jose Larco, en el distrito de Miraflores. Contamos con estacionamiento vigilado para mayor seguridad.</p> <br/>
+						<a href="https://goo.gl/maps/RiKB6iTaBmxG1UkE6" target="_blank">
 						<img src={ubicacion} id="img-ubi"/>
+						</a>
+
 					</div>
 
 					<div className="col col-lg-4 mt-5">

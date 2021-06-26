@@ -25,6 +25,7 @@ function EstadoCita() {
         }else{
             alert("Verifique su codigo y vuelva a ingresarlo")
             setBoton(false)
+            setDatos('')
         }
 
     }
@@ -45,9 +46,10 @@ function EstadoCita() {
                 <Loading/>
             ):(
 
-        <div className="container" style={{width:'100vh',height:'100vh'}}>
+        <div className="container" style={{height:'100vh'}}>
             <div className="row"  style={{justifyContent:'center'}}>
-                <form className="col-12" onSubmit={handlesubmit}>
+                <div className="col col-lg-6">
+                <form  onSubmit={handlesubmit}>
                     <div className="form-group"> 
                        <h4 style={{color:'black'}}>Ingrese el codigo que le brindaron al momento de confirmar su cita</h4>
                        <input
@@ -64,7 +66,7 @@ function EstadoCita() {
                 </form>         
             </div>
             {boton===true && datos !== '' ?
-            <div>
+            <div className="col-12">
             <span>Bienvenid@: {datos.nombre}</span>
             <p>El estado de su cita es: {datos.estado}</p>
             <p>El dia de su cita es: {datos.fecha}</p>
@@ -73,7 +75,7 @@ function EstadoCita() {
             <p>El estilista a realizar el servicio es: </p>
             </div>:
             <Fragment></Fragment>}
-
+        </div>
         </div>)}
         </Fragment>
     )

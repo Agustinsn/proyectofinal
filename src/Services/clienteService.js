@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const url=`${process.env.REACT_APP_URL_API}/agenda`
+const url="https://60b48b134ecdc10017480c38.mockapi.io/agenda"
 
 const obtenerCliente = async()=>{
     try {

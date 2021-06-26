@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url="https://60b48b134ecdc10017480c38.mockapi.io/estilista"
+const url=`${process.env.REACT_APP_URL_API}/estilista`
 
 const obtenerTrabajadores= async ()=>{
     try {

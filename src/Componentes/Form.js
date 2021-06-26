@@ -88,7 +88,7 @@ const ContactForm = () => {
       confirmButtonText: 'Enviar'
     }).then((result)=>{
       if (result.isConfirmed){
-        Swal.fire('Gracias {nombre}! El staff se estará contactando con usted lo antes posible para confirmar su cita.','','success')
+        Swal.fire('Gracias! El staff se estará contactando con usted lo antes posible para confirmar su cita.','','success')
         crearCita(datos)
       } else if (result.isDenied){
         

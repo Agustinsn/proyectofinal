@@ -43,11 +43,11 @@ function HomeView() {
 					</div>
 				</div>
 				<div className="row">
-				<div className="col-6 col-lg-6">	
-				<a href="https://wa.link/hk7s4q" style={{display:'flex',justifyContent:'flex-end'}}><img src={wts} style={{width:'30%'}} href="https://wa.link/pg48kc"/></a>		
+				<div className="col-4 col-lg-6">	
+				<a href="https://wa.link/4ew9a6" style={{display:'flex',justifyContent:'flex-end'}} target="_blank"><img src={wts} id="img-wts"/></a>		
 				</div>
-				<div className="col-6 col-lg-6" >
-				<h1 id="Numcontacto" style={{marginRight:'200px'}} id="contacto">+51 987654321</h1>
+				<div className="col-8 col-lg-6" id="contacto">
+				+51 987654321
 				</div>
 				</div>
 			</div>

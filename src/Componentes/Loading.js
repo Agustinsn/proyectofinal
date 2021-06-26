@@ -14,7 +14,13 @@ function Loading() {
         zIndex:'99'
         }}
         >
-        <Spinner type="grow" style={{width:'50px'}} color="primary"/>
+        <Spinner         
+        style={{
+          position:'absolute',
+          top:'calc(50% - 50px)',
+          left:'calc(50% - 50px)',
+          width:'40px'
+        }} color="primary"/>
         
         </div>
     )

@@ -47,7 +47,7 @@ function EstadoCita() {
 
         <div className="container" style={{width:'100vh',height:'100vh'}}>
             <div className="row"  style={{justifyContent:'center'}}>
-                <form onSubmit={handlesubmit}>
+                <form className="col-12" onSubmit={handlesubmit}>
                     <div className="form-group"> 
                        <h4 style={{color:'black'}}>Ingrese el codigo que le brindaron al momento de confirmar su cita</h4>
                        <input

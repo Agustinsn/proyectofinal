@@ -1,10 +1,11 @@
-import React, { useState,useEffect} from 'react';
+import React, { useState,useEffect, Fragment} from 'react';
 import { crearCita} from '../Services/clienteService';
 import { obtenerTrabajadores } from '../Services/trabajadoresService';
 import { obtenerGaleria } from '../Services/galeriaService';
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
 import Swal from 'sweetalert2';
+import Loading from './Loading';
 import "../estilos.css"
 
 import DatePicker,{registerLocale} from "react-datepicker";
@@ -26,6 +27,8 @@ const ContactForm = () => {
 
   const [servicio,setServicio]=useState([])
   const [id_servicio, setServicioId]=useState('')
+
+  const [cargando, setCargando]= useState(true)
 
 
   let estado = "pendiente"
@@ -51,6 +54,7 @@ const ContactForm = () => {
     try {
       let trabajadoresObtenidos = await obtenerTrabajadores()
       setTrabajadores([...trabajadoresObtenidos])
+      setCargando(false)
 
     } catch (error) {
       throw error
@@ -60,6 +64,7 @@ const ContactForm = () => {
     try {
       let serviciosObtenidos = await obtenerGaleria()
       setServicio([...serviciosObtenidos])
+      setCargando(false)
     } catch (error) {
       throw error
     }
@@ -103,6 +108,12 @@ const ContactForm = () => {
 
 
   return (
+    <Fragment>
+      {
+        cargando? (<Loading/>):(
+
+       
+
     <div className="container">
       <h1 id="form-titulo">Agende su cita</h1>
       <div className="row">
@@ -206,7 +217,9 @@ const ContactForm = () => {
       <div style={{paddingTop:'40px'}}>
 
       </div>
-    </div>
+    </div> )
+      }
+    </Fragment>
   );
 };
 

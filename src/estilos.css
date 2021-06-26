@@ -182,9 +182,3 @@
     font-family: 'Charmonman';
 
 }
-@media (max-width:600px) {
-    #servicios-general{
-        display: flex;
-        justify-content: center;
-    }
-}

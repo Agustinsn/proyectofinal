@@ -13,8 +13,9 @@ function TrabajadoresView() {
     const getTrabajadores = async()=>{
         try {
             let trabajadoresObtenidos= await obtenerTrabajadores()
-            setTrabajadores([...trabajadoresObtenidos])
             setCargando(false)
+            setTrabajadores([...trabajadoresObtenidos])
+
         } catch (error) {
             throw error
         }

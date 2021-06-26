@@ -17,7 +17,7 @@ function EstadoCita() {
     }
     const fechaReal = (dato)=>{
         let fecha = new Date(parseInt(dato))    
-        return fecha.toLocaleDateString()
+       return fecha.toISOString().slice(0,10)
     }
     const horaReal = (dato)=>{
         let hora = new Date(dato)    
@@ -83,7 +83,7 @@ function EstadoCita() {
             <h6>Bienvenid@: {datos.nombre}</h6>
             <p>El estado de su cita es: {datos.estado}</p>
             <p>El dia de su cita es: {fechaReal(datos.fecha)}</p>
-            <p>La hora de su cita es: {horaReal(datos.hora)}</p>
+            <p>La hora de su cita es: {datos.hora}</p>
             <button onClick={(e)=>limpiar(e)}>Limpiar</button>
             </div>:
             <Fragment></Fragment>}

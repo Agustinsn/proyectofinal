@@ -1,30 +1,43 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,Fragment} from 'react'
 import {obtenerGaleria} from '../Services/galeriaService'
-
+import Loading from '../Componentes/Loading'
 
 function GaleriaView() {
 
     const  [galeria,setGaleria] = useState([])
+    const  [cargando, setCargando] = useState(true)
     
     const getGaleria = async ()=>{
         try {
             let galeriaObtenida = await obtenerGaleria()
-            setGaleria([...galeriaObtenida])
+            setGaleria([...galeriaObtenida]);
+            setCargando(false)
+            
         } catch (error) {
             throw error
         }
     }
     
     useEffect(()=>{
-        getGaleria()
+        getGaleria(); 
+        
     },[])
 
     return (
+        <Fragment>
+            {cargando ?(
+                <Loading/>
+            ):
         <div className="container" >
+            <div style={{textAlign:'center',padding:'10px 0px 5px'}}>
+                <h1 id="servicios-titulo">Servicios</h1>
+                <p>Brindamos diversos servicios con los que seguro quedará satisfecho!</p>
+                <p style={{color:'gray', fontWeight:'lighter'}}>Haga click en cada imagen para ver su descripcion</p>
+            </div>
             <div className="row">
             {galeria.map((gal,i)=>(
-                <div className="co-12 col-lg-4" key={i} id="servicios-general">
-                <div className="card mt-3" id="servicios">
+                <div className="co-12 col-lg-4" key={i} id="servicios-general" >
+                <div className="card mt-3" id="servicios" onClick={()=>console.log("click")}>
                     <img className="card-img-top" 
                     src={gal.foto}
                     />
@@ -34,7 +47,8 @@ function GaleriaView() {
                 </div>
             ))}
             </div>
-        </div>
+        </div> }
+        </Fragment>
     )
 }
 

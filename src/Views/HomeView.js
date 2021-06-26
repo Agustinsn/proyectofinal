@@ -46,8 +46,8 @@ function HomeView() {
 				<div className="col-6 col-lg-6">	
 				<a href="https://wa.link/hk7s4q" style={{display:'flex',justifyContent:'flex-end'}}><img src={wts} style={{width:'30%'}} href="https://wa.link/pg48kc"/></a>		
 				</div>
-				<div className="col-6 col-lg-6" id="contacto">
-				<h1 id="Numcontacto" style={{marginRight:'200px'}}>+51 987654321</h1>
+				<div className="col-6 col-lg-6" >
+				<h1 id="Numcontacto" style={{marginRight:'200px'}} id="contacto">+51 987654321</h1>
 				</div>
 				</div>
 			</div>

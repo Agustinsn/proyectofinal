@@ -5,17 +5,14 @@ import "../estilos.css"
 function NavTop() {
     const [estaColapsado,setEstaColapsado] = useState(true)
     const manejarNavbar = ()=> setEstaColapsado(!estaColapsado)
-
-    const [dropColapsado,setDropEstaColapsado] = useState(true)
-    const manejarDrop = ()=> setDropEstaColapsado(!dropColapsado)
   return (
-    <div className=" justify-content-lg-center justify-content-center" id="navgeneral">
-    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-        <div className="container-fluid">
-        <Link className="nav-link" to="/" style={{textDecoration:'none', color:'white'}}>
+    <div className="container-fluid" id="navgeneral">
+    <nav className="navbar navbar-expand-lg navbar-light bg-transparent" >
+        
+        <Link className="nav-link" to="/" id="nav-home"style={{textDecoration:'none', color:'white'}}>
           HOME
         </Link>
-        <div className="container">
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -28,7 +25,7 @@ function NavTop() {
         >
           <span className="navbar-toggler-icon" ></span>
         </button>
-        </div>
+        
         <div className={`${estaColapsado?'collapse':''} navbar-collapse`} id="navbarNav" >
         {/*ACA VA EL DROPDOWN*/}
           <ul className="navbar-nav">
@@ -47,8 +44,10 @@ function NavTop() {
               style={{backgroundColor:'#2d3436'}}>
                 <li >
                   <Link className="dropdown-item py-2" 
-                  to="/Trabajadores" style={{color:'white'}}>Nuestro Equipo</Link></li>
-                <li ><a className="dropdown-item" href="/#contacto" style={{color:'white'}}>Contactanos</a></li>
+                  to="/Trabajadores" style={{color:'white'}}
+                  onClick={manejarNavbar}>Nuestro Equipo</Link></li>
+                <li ><a className="dropdown-item" href="/#contacto" style={{color:'white'}} onClick={manejarNavbar}
+                >Contactanos</a></li>
               </ul>
 
             </li>
@@ -57,7 +56,8 @@ function NavTop() {
               <Link
                 className="nav-link"
                 to="/Galeria"
-                style={{textDecoration:'none', color:'white'}}>
+                style={{textDecoration:'none', color:'white'}}
+                onClick={manejarNavbar}>
                 SERVICIOS
               </Link>
             </li>
@@ -66,6 +66,7 @@ function NavTop() {
                 className="nav-link"
                 href="#"
                 style={{textDecoration:'none', color:'white'}}
+                onClick={manejarNavbar}
                 >
                 GALERIA
               </a>
@@ -74,13 +75,14 @@ function NavTop() {
               <Link
                 className="nav-link"
                 to="/Cita"
-                style={{textDecoration:'none', color:'white'}}>
+                style={{textDecoration:'none', color:'white'}}
+                onClick={manejarNavbar}>
                 RESERVA TU CITA
               </Link>
             </li>
           </ul>
         </div>
-        </div>
+        
     </nav>
     </div>
   );

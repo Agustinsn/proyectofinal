@@ -20,6 +20,7 @@ function EstadoCita() {
             return encontrado
         }else{
             alert("Verifique su codigo y vuelva a ingresarlo")
+            setBoton(false)
         }
 
     }
@@ -53,7 +54,7 @@ function EstadoCita() {
                     <button className="btn btn-success" type="submit">Ver Cita</button>
                 </form>         
             </div>
-            {boton===true?
+            {boton===true && datos !== '' ?
             <div>
             <span>Bienvenid@ {datos.nombre}</span>
             <p>El estado de su cita es: {datos.estado}</p>

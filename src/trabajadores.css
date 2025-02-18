@@ -7,9 +7,7 @@
 #TrabGen header{
   display: block;
   text-align: center;
-  font-family: 'Charmonman';
-  font-size: 70px;
-  animation:rubberBand;
+  font-size: 80px;
   animation-duration: 3s;
 }
 #row-card div{
@@ -22,7 +20,8 @@
     flex-direction: row;
     margin-bottom: 50px;
     color: black;
-    background: radial-gradient(circle, rgba(154,156,158,1) 32%, rgba(245,247,250,1) 100%);    
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(10px);
     width: 80%;
     box-shadow: 10px 5px 5px rgba(71, 71, 71, 0.719);
   }
@@ -35,13 +34,8 @@
       width: 100%;
     }
   }
-  .card:hover{
-    box-shadow: 5px 10px 20px 1px rgb(221, 8, 37) !important;
-    transition: all 0.7s linear;
-  }
   .card-title {
     font-weight: bold;
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 25px;
   }
  #img-trab {

@@ -17,18 +17,17 @@ function HomeView() {
 				</div>
 
 				<div className="row">
-					<div className="col col-lg-8 mt-5">	
+					<div className="col col-lg-8 mt-5" style={{borderRight:'2px solid gray'}}>	
 						<h2>Nuestra Ubicacion</h2>
 						<p>Nos encontramos en Av. Jose Larco, en el distrito de Miraflores. Contamos con estacionamiento vigilado para mayor seguridad.</p> <br/>
-						<a href="https://goo.gl/maps/RiKB6iTaBmxG1UkE6" target="_blank">
-						<img src={ubicacion} id="img-ubi"/>
+						<a href="https://goo.gl/maps/RiKB6iTaBmxG1UkE6" target="_blank" rel="noreferrer">
+						<img src={ubicacion} id="img-ubi" alt="ubi"/>
 						</a>
 
 					</div>
 
 					<div className="col col-lg-4 mt-5">
 						<h2>Horario de Atencion</h2>
-						<p>Debido a la pandemia actual, nuestro horario de atencion se encuentra reducido, asi mismo es necesario agendar la cita previamente debido al limite de aforo permitido</p>
 						<div style={{paddingTop:'50px',fontSize:'20px',fontWeight:'bold'}}>
 							Lunes a Sabado de 9am a 9pm
 							<br/>
@@ -47,7 +46,7 @@ function HomeView() {
 				</div>
 				<div className="row">
 				<div className="col-4 col-lg-6">	
-				<a href="https://wa.link/4ew9a6" style={{display:'flex',justifyContent:'flex-end'}} target="_blank"><img src={wts} id="img-wts"/></a>		
+				<a href="https://wa.link/4ew9a6" style={{display:'flex',justifyContent:'flex-end'}} target="_blank" rel="noreferrer"><img src={wts} id="img-wts"/></a>		
 				</div>
 				<div className="col-8 col-lg-6" id="contacto">
 				+51 987654321

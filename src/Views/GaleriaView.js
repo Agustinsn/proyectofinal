@@ -41,6 +41,7 @@ function GaleriaView() {
                 <div className="card mt-3" id="servicios" >
                     <img className="card-img-top" 
                     src={gal.foto}
+                    alt={gal.id}
                     />
                     <p>{gal.nombre}</p>
                     <p style={{fontWeight:'bold'}}>Precio: S/. {gal.precio}</p>

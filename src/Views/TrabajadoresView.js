@@ -29,7 +29,7 @@ function TrabajadoresView() {
                 <Loading/>
             ):(
         <div className="container" id="TrabGen">
-        <header>EL EQUIPO</header>
+        <header>El Equipo</header>
         <div style={{textAlign:'center'}}><p>Nuestro equipo esta conformado por los mejores profesionales del mercado, altamente capacitados para cualquier servicio que desee.
                 </p></div>
 

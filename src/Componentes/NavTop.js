@@ -9,7 +9,7 @@ function NavTop() {
     <div className="container-fluid" id="navgeneral">
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent" >
         
-        <Link className="nav-link" to="/" id="nav-home"style={{textDecoration:'none', color:'white'}}>
+        <Link className="nav-link" to="/" id="nav-home"style={{textDecoration:'none',color:'black'}}>
           HOME
         </Link>
         
@@ -35,7 +35,7 @@ function NavTop() {
               role="button" 
               data-toggle="dropdown"             
               aria-expanded="false" 
-              style={{textDecoration:'none', color:'white'}}>
+              style={{textDecoration:'none', color:'black'}}>
                 QUIENES SOMOS
               </a>
               {/* ACA VA EL MENU DEL DROPDOWN*/}
@@ -61,7 +61,7 @@ function NavTop() {
               <Link
                 className="nav-link"
                 to="/Galeria"
-                style={{textDecoration:'none', color:'white'}}
+                style={{textDecoration:'none', color:'black'}}
                 onClick={manejarNavbar}>
                 SERVICIOS
               </Link>
@@ -70,7 +70,7 @@ function NavTop() {
               <Link
                 className="nav-link"
                 to="/Cita"
-                style={{textDecoration:'none', color:'white'}}
+                style={{textDecoration:'none', color:'black'}}
                 onClick={manejarNavbar}>
                 RESERVA TU CITA
               </Link>
